@@ -23,5 +23,9 @@
                 "type": "private_isolated"
             }
         ]
+    },
+    "route53": {
+        "domain": "qlub.cloud",
+        "internalDomainNamespace": "hamid-testlab"
     }
 }

@@ -1,0 +1,11 @@
+{
+  "availability-zones:account=132248825767:region=eu-west-1": [
+    "eu-west-1a",
+    "eu-west-1b",
+    "eu-west-1c"
+  ],
+  "hosted-zone:account=132248825767:domainName=qlub.cloud:region=eu-west-1": {
+    "Id": "/hostedzone/Z00351681GSONW5VF6RMN",
+    "Name": "qlub.cloud."
+  }
+}
