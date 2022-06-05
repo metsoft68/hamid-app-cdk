@@ -1,0 +1,27 @@
+{
+    "env": {
+        "accountnumber": "132248825767",
+        "region": "eu-west-1"
+    },
+    "app":{
+        "name":"hamid"
+    },
+    "vpc": {
+        "cidr":"10.0.0.0/16",
+        "maxAzs": 3,
+        "enableDnsHostnames": true,
+        "enableDnsSupport": true,
+        "subnets": [
+            {
+                "name":"public-subnet/",
+                "cidrMask": 24,
+                "type": "public"
+            },
+            {
+                "name":"private-subnet/",
+                "cidrMask": 24,
+                "type": "private_isolated"
+            }
+        ]
+    }
+}
