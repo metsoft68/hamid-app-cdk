@@ -16,11 +16,11 @@ export class HamidAppVpcStack extends Stack {
 
   static vpc: ec2.Vpc;
 
-  constructor(scope: Construct, id: string, props?: HamidAppVpcStackProps) {
+  constructor(scope: Construct, id: string, props: HamidAppVpcStackProps) {
     super(scope, id, props);
     
     const subnetConfig: any[] = [];
-    props?.subnets.forEach(function (subnet) {
+    props.subnets.forEach(function (subnet) {
       const tempDict: any = {};
       switch(subnet.type) {
         case "public":
@@ -38,11 +38,11 @@ export class HamidAppVpcStack extends Stack {
       subnetConfig.push(tempDict);
     });
     
-    const vpc = new ec2.Vpc(this, props?.app_name + "-vpc", {
-      cidr: props?.cidr,
-      enableDnsHostnames: props?.enableDnsHostnames,
-      enableDnsSupport: props?.enableDnsSupport,
-      maxAzs: props?.maxAzs,
+    const vpc = new ec2.Vpc(this, props.app_name + "-vpc", {
+      cidr: props.cidr,
+      enableDnsHostnames: props.enableDnsHostnames,
+      enableDnsSupport: props.enableDnsSupport,
+      maxAzs: props.maxAzs,
       subnetConfiguration: subnetConfig
     });
 
