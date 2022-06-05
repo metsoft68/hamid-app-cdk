@@ -61,7 +61,7 @@ export class HamidAppAlbStack extends Stack {
       protocol: elbv2.ApplicationProtocol.HTTP,
     });
 
-    const port443 = new elbv2.ApplicationListener(this, "https-port", {
+    new elbv2.ApplicationListener(this, "https-port", {
       loadBalancer: ALBLoadBalancer,
       open: true,
       port: 443,
