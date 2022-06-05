@@ -13,6 +13,9 @@ interface HamidAppVpcStackProps extends StackProps {
 }
 
 export class HamidAppVpcStack extends Stack {
+
+  static vpc: ec2.Vpc;
+
   constructor(scope: Construct, id: string, props?: HamidAppVpcStackProps) {
     super(scope, id, props);
     
@@ -41,6 +44,8 @@ export class HamidAppVpcStack extends Stack {
       enableDnsSupport: props?.enableDnsSupport,
       maxAzs: props?.maxAzs,
       subnetConfiguration: subnetConfig
-    })
+    });
+
+    HamidAppVpcStack.vpc=vpc;
   }
 }
