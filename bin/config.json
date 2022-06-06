@@ -27,5 +27,19 @@
     "route53": {
         "domain": "qlub.cloud",
         "internalDomainNamespace": "hamid-testlab"
+    },
+    "redis": {
+        "name":"hamid",
+        "defaultRedisPassword": "kjhehsdlfjsdkfvjewril"
+    },
+    "rds": {
+        "name": "testdb",
+        "allocatedStorage": 20
+    },
+    "opensearch": {
+        "name": "testes",
+        "volumeSize": 10,
+        "dataNodeInstanceType": "t3.small.search",
+        "dataNodes": 2
     }
 }
